@@ -1,0 +1,5 @@
+#+TITLE: CS250 Midterm 1 Review
+#+AUTHOR: Theo Park
+#+OPTIONS: toc:2
+
+* Chapter 3
