@@ -6,16 +6,16 @@
 
 ** Definitions
 
-- /Computer/ is a *machine that can be programmed to carry out computation automatically*
+- /Computer/ is a machine that can be programmed to *carry out computation automatically*
 - /Architecture/ is a *conceiving, planning, and designing structures*
   + CA has purpose only when given SW
-- /Software/ is a *description of a computation expressed in a programming language, any data, and documentation*
+- /Software/ is a *description of a computation* expressed in a programming language, any data, and documentation
   + Purpose 1: Definining an DS & A
   + Purpose 2: Executing
 - /Interpreter/ *executes software*
   + Directly executes instructions expressed in a PL
-  + **Does NOT reply on "Turtles all the way down" (interpreter for interpreter for interpreter...) approach*
-- /Compiling/ is the process of **traslating programs written in one HLL (High-level language) into a LLL that has a machine interpreter**
+  + *Does NOT rely on "Turtles all the way down"* (interpreter for interpreter for interpreter...) approach
+- /Compiling/ is the process of *traslating* programs written in one *HLL* (High-level language) into a *LLL* that *has a machine interpreter*
   
 ** C Compiling Process
 
@@ -55,10 +55,10 @@ source_code -> preprocessor -> preprocessed source code -> compiler -> assembly 
 
 *** Harvard Architecture
 
-**Separate memories** for instructions and data
+*Separate memories* for instructions and data
 
 *** Von Neumann Architecture
 
-**Single memory** for instruction and data
+*Single memory* for instruction and data
 
 * Representation
