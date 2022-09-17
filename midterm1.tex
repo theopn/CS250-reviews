@@ -1,0 +1,122 @@
+% Created 2022-09-17 Sat 16:25
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Theo Park}
+\date{\today}
+\title{CS250 Midterm 1 Review}
+\hypersetup{
+ pdfauthor={Theo Park},
+ pdftitle={CS250 Midterm 1 Review},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.1 (Org mode 9.5.2)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+
+\section{Why Computer Architecture}
+\label{sec:org273b6b5}
+
+\subsection{Definitions}
+\label{sec:orgf10deea}
+
+\begin{itemize}
+\item \emph{Computer} is a \textbf{machine that can be programmed to carry out computation automatically}
+\item \emph{Architecture} is a \textbf{conceiving, planning, and designing structures}
+\begin{itemize}
+\item CA has purpose only when given SW
+\end{itemize}
+\item \emph{Software} is a \textbf{description of a computation expressed in a programming language, any data, and documentation}
+\begin{itemize}
+\item Purpose 1: Definining an DS \& A
+\item Purpose 2: Executing
+\end{itemize}
+\item \emph{Interpreter} \textbf{executes software}
+\begin{itemize}
+\item Directly executes instructions expressed in a PL
+\item \textbf{*Does NOT reply on "Turtles all the way down" (interpreter for interpreter for interpreter\ldots{}) approach}
+\end{itemize}
+\item \emph{Compiling} is the process of \textbf{\textbf{traslating programs written in one HLL (High-level language) into a LLL that has a machine interpreter}}
+\end{itemize}
+
+\subsection{C Compiling Process}
+\label{sec:org7a480a8}
+
+\begin{verbatim}
+source_code -> preprocessor -> preprocessed source code -> compiler -> assembly code -> assembler -> relocatable object code -> linker (w/ object code in lib) -> binary object code
+\end{verbatim}
+
+\subsection{Mechanical Computers}
+\label{sec:org6b758f2}
+
+\begin{itemize}
+\item Antikythera Mechanism (200B.C): Count Olumpics days
+\item Charles Babbage (1849)
+\end{itemize}
+
+\subsubsection{Disadvantages}
+\label{sec:orgc05276f}
+
+\begin{itemize}
+\item Parts are small, require individual assembly
+\item Part shape and size determine computational function
+\item Parts cause waer and accuracy degrades over time
+\item Algorithm are slow
+\end{itemize}
+
+\subsection{Vacuum Tube Computers}
+\label{sec:orgc1906c1}
+
+\begin{itemize}
+\item Colossus
+\end{itemize}
+
+\subsubsection{Disadvantages}
+\label{sec:orgf857a19}
+
+\begin{itemize}
+\item About the same volume as mechanical computer
+\item Uses a lot of electrical energy
+\item Vacuum tubes burn out
+\end{itemize}
+
+\subsection{Transistor}
+\label{sec:org28effe0}
+
+\begin{itemize}
+\item First one built at AT\&T Bell Labs
+\item Used to use germanium crystal, now use silicon
+\item Futures are graphene or single layer of carbon
+\end{itemize}
+
+\subsection{Two Architectures}
+\label{sec:orga9b056f}
+
+\subsubsection{Harvard Architecture}
+\label{sec:org2cdaae8}
+
+\textbf{\textbf{Separate memories}} for instructions and data
+
+\subsubsection{Von Neumann Architecture}
+\label{sec:org9faa97b}
+
+\textbf{\textbf{Single memory}} for instruction and data
+
+\section{Representation}
+\label{sec:org84fe7a7}
+\end{document}

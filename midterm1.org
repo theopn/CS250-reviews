@@ -2,4 +2,63 @@
 #+AUTHOR: Theo Park
 #+OPTIONS: toc:2
 
-* Chapter 3
+* Why Computer Architecture
+
+** Definitions
+
+- /Computer/ is a *machine that can be programmed to carry out computation automatically*
+- /Architecture/ is a *conceiving, planning, and designing structures*
+  + CA has purpose only when given SW
+- /Software/ is a *description of a computation expressed in a programming language, any data, and documentation*
+  + Purpose 1: Definining an DS & A
+  + Purpose 2: Executing
+- /Interpreter/ *executes software*
+  + Directly executes instructions expressed in a PL
+  + **Does NOT reply on "Turtles all the way down" (interpreter for interpreter for interpreter...) approach*
+- /Compiling/ is the process of **traslating programs written in one HLL (High-level language) into a LLL that has a machine interpreter**
+  
+** C Compiling Process
+
+#+begin_src
+source_code -> preprocessor -> preprocessed source code -> compiler -> assembly code -> assembler -> relocatable object code -> linker (w/ object code in lib) -> binary object code
+#+end_src
+
+** Mechanical Computers
+
+- Antikythera Mechanism (200B.C): Count Olumpics days
+- Charles Babbage (1849)
+
+*** Disadvantages
+
+- Parts are small, require individual assembly
+- Part shape and size determine computational function
+- Parts cause waer and accuracy degrades over time
+- Algorithm are slow
+
+** Vacuum Tube Computers
+
+- Colossus
+
+*** Disadvantages
+
+- About the same volume as mechanical computer
+- Uses a lot of electrical energy
+- Vacuum tubes burn out
+
+** Transistor
+
+- First one built at AT&T Bell Labs
+- Used to use germanium crystal, now use silicon
+- Futures are graphene or single layer of carbon
+
+** Two Architectures
+
+*** Harvard Architecture
+
+**Separate memories** for instructions and data
+
+*** Von Neumann Architecture
+
+**Single memory** for instruction and data
+
+* Representation
