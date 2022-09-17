@@ -2,5 +2,7 @@
 #+AUTHOR: Theo Park
 #+OPTIONS: toc:2
 
-This repository includes review materials made by me for CS25000: Computer Architecture taught by Professor George Adams in Fall 2022. Visit each Org files for the materials for each exam.
+This repository includes review materials made by me for CS25000: Computer Architecture taught by Professor George Adams in Fall 2022.
+
+Visit Org files or compiled PDF files for each exam materials.
 
