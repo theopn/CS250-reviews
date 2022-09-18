@@ -19,9 +19,13 @@
   
 ** C Compiling Process
 
+// TODO
 #+begin_src
 source_code -> preprocessor -> preprocessed source code -> compiler -> assembly code -> assembler -> relocatable object code -> linker (w/ object code in lib) -> binary object code
 #+end_src
+
+- Preprocessed Source Code: Does not contain *comments, macros, includes*, etc 
+- Assembly Code: *Machine specific*
 
 ** Mechanical Computers
 
@@ -62,3 +66,37 @@ source_code -> preprocessor -> preprocessed source code -> compiler -> assembly 
 *Single memory* for instruction and data
 
 * Representation
+
+** Electrical Representation of Bits
+
+- *V (max) voltage V - $\Delta$* is recognizes as 1
+- *0 to 0 + $\delta$* is recognizes as 0
+- *Rising edge* and *falling edge* are ignored
+
+** Bit String
+
+- *Bus: Collection of k wires carrying k-bits*
+- *k-bits* on *k-wires*
+- k-bits can represent up to *$2^k$ values*
+- /Bit strings are only meaningful when it is paried with a representation/
+
+* Regular Representations
+
+** Unsigned integer, base 2, weighted positional
+
+*Regular binary number* that we think of normally.
+
+~001011~ = $0 \times 2^5 + 0 \times 2^4 + 1 \times 2^3 + 0 \times 2^2 + 1 \times 2^1 + 1 \times 2^0 = 11$
+
+** Sign Magnitude
+
+*UIB2WP but the MSB is the sign* (MSP = left most bit).
+
+~101011~ = $-1(0 \times 2^4 + 1 \times 2^3 + 0 \times 2^2 + 1 \times 2^1 + 1 \times 2^0) = -11$
+
+*** Disadvantages of sign magnitude
+
+- There are two zeros (0000 = +0, 1000 = -1)
+- Less number can be represented (duh)
+
+** Two's Complement

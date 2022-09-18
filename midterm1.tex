@@ -1,4 +1,4 @@
-% Created 2022-09-17 Sat 16:29
+% Created 2022-09-18 Sun 17:27
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -30,10 +30,10 @@
 
 
 \section{Why Computer Architecture}
-\label{sec:org82c2011}
+\label{sec:org700f66c}
 
 \subsection{Definitions}
-\label{sec:org31cdfd2}
+\label{sec:org936cb10}
 
 \begin{itemize}
 \item \emph{Computer} is a machine that can be programmed to \textbf{carry out computation automatically}
@@ -55,14 +55,20 @@
 \end{itemize}
 
 \subsection{C Compiling Process}
-\label{sec:org9030018}
+\label{sec:org29ea6c1}
 
+// TODO
 \begin{verbatim}
 source_code -> preprocessor -> preprocessed source code -> compiler -> assembly code -> assembler -> relocatable object code -> linker (w/ object code in lib) -> binary object code
 \end{verbatim}
 
+\begin{itemize}
+\item Preprocessed Source Code: Does not contain \textbf{comments, macros, includes}, etc
+\item Assembly Code: \textbf{Machine specific}
+\end{itemize}
+
 \subsection{Mechanical Computers}
-\label{sec:org3c16917}
+\label{sec:org2d1f3b9}
 
 \begin{itemize}
 \item Antikythera Mechanism (200B.C): Count Olumpics days
@@ -70,7 +76,7 @@ source_code -> preprocessor -> preprocessed source code -> compiler -> assembly 
 \end{itemize}
 
 \subsubsection{Disadvantages}
-\label{sec:orgf460e20}
+\label{sec:org05388cc}
 
 \begin{itemize}
 \item Parts are small, require individual assembly
@@ -80,14 +86,14 @@ source_code -> preprocessor -> preprocessed source code -> compiler -> assembly 
 \end{itemize}
 
 \subsection{Vacuum Tube Computers}
-\label{sec:orgad836db}
+\label{sec:org248702e}
 
 \begin{itemize}
 \item Colossus
 \end{itemize}
 
 \subsubsection{Disadvantages}
-\label{sec:org2814d9c}
+\label{sec:org043bd06}
 
 \begin{itemize}
 \item About the same volume as mechanical computer
@@ -96,7 +102,7 @@ source_code -> preprocessor -> preprocessed source code -> compiler -> assembly 
 \end{itemize}
 
 \subsection{Transistor}
-\label{sec:org0d3bf0d}
+\label{sec:orgf9585b3}
 
 \begin{itemize}
 \item First one built at AT\&T Bell Labs
@@ -105,18 +111,65 @@ source_code -> preprocessor -> preprocessed source code -> compiler -> assembly 
 \end{itemize}
 
 \subsection{Two Architectures}
-\label{sec:org346516e}
+\label{sec:org4448219}
 
 \subsubsection{Harvard Architecture}
-\label{sec:orgeebcadf}
+\label{sec:org95d1259}
 
 \textbf{Separate memories} for instructions and data
 
 \subsubsection{Von Neumann Architecture}
-\label{sec:orgbc69deb}
+\label{sec:org7aaa20a}
 
 \textbf{Single memory} for instruction and data
 
 \section{Representation}
-\label{sec:org2be4f8e}
+\label{sec:org2c776e8}
+
+\subsection{Electrical Representation of Bits}
+\label{sec:org420444a}
+
+\begin{itemize}
+\item \textbf{V (max) voltage V - \(\Delta\)} is recognizes as 1
+\item \textbf{0 to 0 + \(\delta\)} is recognizes as 0
+\item \textbf{Rising edge} and \textbf{falling edge} are ignored
+\end{itemize}
+
+\subsection{Bit String}
+\label{sec:org23b0f08}
+
+\begin{itemize}
+\item \textbf{Bus: Collection of k wires carrying k-bits}
+\item \textbf{k-bits} on \textbf{k-wires}
+\item k-bits can represent up to \textbf{\(2^k\) values}
+\item \emph{Bit strings are only meaningful when it is paried with a representation}
+\end{itemize}
+
+\section{Regular Representations}
+\label{sec:orgac5b3cc}
+
+\subsection{Unsigned integer, base 2, weighted positional}
+\label{sec:org2cec9a3}
+
+\emph{Regular binary number} that we think of normally.
+
+\texttt{001011} = \(0 \times 2^5 + 0 \times 2^4 + 1 \times 2^3 + 0 \times 2^2 + 1 \times 2^1 + 1 \times 2^0 = 11\)
+
+\subsection{Sign Magnitude}
+\label{sec:orgdb54637}
+
+\emph{UIB2WP but the MSB is the sign}. MSP = left most bit.
+
+\texttt{101011} = \(-1(0 \times 2^4 + 1 \times 2^3 + 0 \times 2^2 + 1 \times 2^1 + 1 \times 2^0) = -11\)
+
+\subsubsection{Disadvantages of sign magnitude}
+\label{sec:org08eafdd}
+
+\begin{itemize}
+\item There are two zeros (0000 = +0, 1000 = -1)
+\item Less number can be represented (duh)
+\end{itemize}
+
+\subsection{Two's Complement}
+\label{sec:org71029fa}
 \end{document}
