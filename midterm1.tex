@@ -1,4 +1,4 @@
-% Created 2022-09-18 Sun 17:27
+% Created 2022-09-19 Mon 00:52
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -30,10 +30,10 @@
 
 
 \section{Why Computer Architecture}
-\label{sec:org700f66c}
+\label{sec:orgc8a0220}
 
 \subsection{Definitions}
-\label{sec:org936cb10}
+\label{sec:org80b6dfb}
 
 \begin{itemize}
 \item \emph{Computer} is a machine that can be programmed to \textbf{carry out computation automatically}
@@ -55,9 +55,9 @@
 \end{itemize}
 
 \subsection{C Compiling Process}
-\label{sec:org29ea6c1}
+\label{sec:org08285fc}
 
-// TODO
+// TODO Find a better way to put diagram in Org files
 \begin{verbatim}
 source_code -> preprocessor -> preprocessed source code -> compiler -> assembly code -> assembler -> relocatable object code -> linker (w/ object code in lib) -> binary object code
 \end{verbatim}
@@ -68,7 +68,7 @@ source_code -> preprocessor -> preprocessed source code -> compiler -> assembly 
 \end{itemize}
 
 \subsection{Mechanical Computers}
-\label{sec:org2d1f3b9}
+\label{sec:orgba3713a}
 
 \begin{itemize}
 \item Antikythera Mechanism (200B.C): Count Olumpics days
@@ -76,7 +76,7 @@ source_code -> preprocessor -> preprocessed source code -> compiler -> assembly 
 \end{itemize}
 
 \subsubsection{Disadvantages}
-\label{sec:org05388cc}
+\label{sec:orgc1e6b6a}
 
 \begin{itemize}
 \item Parts are small, require individual assembly
@@ -86,14 +86,14 @@ source_code -> preprocessor -> preprocessed source code -> compiler -> assembly 
 \end{itemize}
 
 \subsection{Vacuum Tube Computers}
-\label{sec:org248702e}
+\label{sec:org807699f}
 
 \begin{itemize}
 \item Colossus
 \end{itemize}
 
 \subsubsection{Disadvantages}
-\label{sec:org043bd06}
+\label{sec:org07bfcb1}
 
 \begin{itemize}
 \item About the same volume as mechanical computer
@@ -102,7 +102,7 @@ source_code -> preprocessor -> preprocessed source code -> compiler -> assembly 
 \end{itemize}
 
 \subsection{Transistor}
-\label{sec:orgf9585b3}
+\label{sec:org010ec42}
 
 \begin{itemize}
 \item First one built at AT\&T Bell Labs
@@ -111,23 +111,23 @@ source_code -> preprocessor -> preprocessed source code -> compiler -> assembly 
 \end{itemize}
 
 \subsection{Two Architectures}
-\label{sec:org4448219}
+\label{sec:orgc586793}
 
 \subsubsection{Harvard Architecture}
-\label{sec:org95d1259}
+\label{sec:org152fc90}
 
 \textbf{Separate memories} for instructions and data
 
 \subsubsection{Von Neumann Architecture}
-\label{sec:org7aaa20a}
+\label{sec:org333747e}
 
 \textbf{Single memory} for instruction and data
 
 \section{Representation}
-\label{sec:org2c776e8}
+\label{sec:org6ad20ca}
 
 \subsection{Electrical Representation of Bits}
-\label{sec:org420444a}
+\label{sec:org1df6ba4}
 
 \begin{itemize}
 \item \textbf{V (max) voltage V - \(\Delta\)} is recognizes as 1
@@ -136,7 +136,7 @@ source_code -> preprocessor -> preprocessed source code -> compiler -> assembly 
 \end{itemize}
 
 \subsection{Bit String}
-\label{sec:org23b0f08}
+\label{sec:orge795f23}
 
 \begin{itemize}
 \item \textbf{Bus: Collection of k wires carrying k-bits}
@@ -146,24 +146,26 @@ source_code -> preprocessor -> preprocessed source code -> compiler -> assembly 
 \end{itemize}
 
 \section{Regular Representations}
-\label{sec:orgac5b3cc}
+\label{sec:org8fe1875}
+
+Unsigned and 2's complement integers are native data types for most modern circuits
 
 \subsection{Unsigned integer, base 2, weighted positional}
-\label{sec:org2cec9a3}
+\label{sec:org8d5d100}
 
-\emph{Regular binary number} that we think of normally.
+\textbf{Regular binary number} that we think of normally.
 
 \texttt{001011} = \(0 \times 2^5 + 0 \times 2^4 + 1 \times 2^3 + 0 \times 2^2 + 1 \times 2^1 + 1 \times 2^0 = 11\)
 
 \subsection{Sign Magnitude}
-\label{sec:orgdb54637}
+\label{sec:orgb9c460a}
 
-\emph{UIB2WP but the MSB is the sign}. MSP = left most bit.
+\textbf{UIB2WP but the MSB is the sign} (MSP = left most bit).
 
 \texttt{101011} = \(-1(0 \times 2^4 + 1 \times 2^3 + 0 \times 2^2 + 1 \times 2^1 + 1 \times 2^0) = -11\)
 
-\subsubsection{Disadvantages of sign magnitude}
-\label{sec:org08eafdd}
+\subsubsection{Characteristics of sign magnitude}
+\label{sec:org6791e67}
 
 \begin{itemize}
 \item There are two zeros (0000 = +0, 1000 = -1)
@@ -171,5 +173,100 @@ source_code -> preprocessor -> preprocessed source code -> compiler -> assembly 
 \end{itemize}
 
 \subsection{Two's Complement}
-\label{sec:org71029fa}
+\label{sec:org4633eac}
+
+\textbf{MSB weight is negative}
+
+\texttt{101011} = \(-(1 \times 2^4) + 1 \times 2^3 + 0 \times 2^2 + 1 \times 2^1 + 1 \times 2^0) = -5\)
+
+\subsubsection{Characteristics of two's complement}
+\label{sec:org496655b}
+
+\begin{itemize}
+\item Only one bit string for zero
+\item \textbf{Invert bit string and add 1 to get the negative}
+\item \textbf{Uses the same circuit as unsigned integer add/subtraction}
+\end{itemize}
+
+\section{Casting/Sign Extension}
+\label{sec:org0145952}
+
+\begin{itemize}
+\item Unsigned integer: \textbf{Add 0 in front}
+\item 2's complement: \textbf{Add MSB in front}
+\end{itemize}
+
+\section{Overflow}
+\label{sec:org3494566}
+
+\begin{itemize}
+\item Adding two k-bit unsigned integer resulting in (k+1)-bit result
+\item \(A +_k B = (A+B) \text{ mod } k\) prevents it
+\end{itemize}
+
+\section{Gray Code}
+\label{sec:orgc27a5d9}
+
+For sensors where bits need to be detected fast, "gray code" where only one bit changes per number is used.
+
+\section{ASCII}
+\label{sec:org11908b4}
+
+\subsection{History}
+\label{sec:org87d64c8}
+
+\emph{Baudot Code} in 1870 used to represent \(2^5\) characters with 5 keys.
+
+\subsubsection{Design of ASCII}
+\label{sec:org4db9cdf}
+
+\begin{itemize}
+\item \textbf{Designed for machine, not human}
+\item Alphabetic order = integer order of chracter codes
+\item Upper and lower case only differ in \textbf{bit 7, the MSB}
+\end{itemize}
+
+\subsubsection{Unicode}
+\label{sec:orga224ea9}
+
+\begin{itemize}
+\item Up to 4 bytes per character
+\item Currently 14.0, supports emoji
+\end{itemize}
+
+\section{Order of Bytes in Memory}
+\label{sec:org6fcaf0e}
+
+\begin{itemize}
+\item \emph{Big Endian}: \textbf{MSB comes first}
+\texttt{0x5060} is stored as \texttt{0x5060}
+\item \emph{Lil Endian}: \textbf{LSB comes first}
+\texttt{0x5060} is stored as \texttt{0x6050}
+\end{itemize}
+
+\section{Floating Point Representation (IEEE 754)}
+\label{sec:orgd573ec0}
+
+\texttt{|S| Exponent | mantissa |}
+
+\subsection{Exponent}
+\label{sec:orgccf78ee}
+
+Exponent is a biased integer. The initial range is -127 < e < 127, sign is made implicit by E = e + Bias = e + 127.
+
+\subsection{Mantissa}
+\label{sec:org714f1df}
+
+Unless the number is 0, the MSB of the mantissa must be 1 -> No need to store! (\textbf{hidden bit}).
+Instead, \textbf{one extra precision bit} is stored in the end.
+
+\subsection{Runtime Anomalies}
+\label{sec:orgcd37fc0}
+
+\begin{enumerate}
+\item \emph{E = 0, Mantissa = 0,}: \(\pm 0\), depending on the sign bit
+\item \emph{E = 0, Mantissa \(\neq\) 0, Mantissa MSB = 0}: De-normalized number, gradual underflow
+\item \emph{E = 255, Mantissa = 0}: \(\pm \infty\); in general, overflow is set to infinity to help people
+\item \emph{E = 255, Mantissa \(\neq\) 0}: Not a Number
+\end{enumerate}
 \end{document}
