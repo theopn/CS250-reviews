@@ -1,6 +1,6 @@
 #+TITLE: CS250 Midterm 1 Review
 #+AUTHOR: Theo Park
-#+OPTIONS: toc:2
+#+OPTIONS: toc:2 ^:nil
 
 * Why Computer Architecture
 
@@ -137,7 +137,7 @@ For sensors where bits need to be detected fast, "gray code" where only one bit 
 
 - *Designed for machine, not human*
 - Alphabetic order = integer order of chracter codes
-- Upper and lower case only differ in *bit 7, the MSB*
+- Upper and lower case only differ in *bit 7, the MSB* (these days 8 bits are used, but MSB is always 0)
 
 *** Unicode
 
@@ -176,8 +176,8 @@ Instead, *one extra precision bit* is stored in the end.
 
 ** Pointing Function
 
-#+CAPTION: Abstract Pointing Function Diagram
-#+NAME:   Abstract Pointing Function Diagram by Prof. George B. Adams
+#+CAPTION: Abstract Pointing Function Diagram by Prof. George B Adams
+#+NAME:   Abstract Pointing Function Diagram by Prof. George B Adams
 [[./img/pointing_function.jpg]]
 
 Memory chips are 2D, $2^{k/2} \times 2^{k/2}$ grid creates $2^k$ intersections -> Only $2 * 2^{k/2}$ wires needed! Optimized design can reduce number of wires by $\sqrt{2^k} / 2$
@@ -222,8 +222,8 @@ A circuit with n wires input and 2^n wires output. Decoding output is selected o
 
 * General One-Step Processor Circuit
 
-#+CAPTION: General One-Step Processor Circuit
-#+NAME:   General One-step Processor Circuit Diagram by Prof. George B. Adams
+#+CAPTION: General One-Step Processor Circuit by Prof. George B Adams
+#+NAME:   General One-step Processor Circuit Diagram by Prof. George B Adams
 [[./img/general_one_step_processor_circuit.jpg]]
 
 Key points:
