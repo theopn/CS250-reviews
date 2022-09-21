@@ -1,0 +1,22 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /Users/parktheo0/Repositories/GitHub/CS250-reviews/midterm1.org
+
+
+* Decoder
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-09-20 Tue 22:21
+:ARCHIVE_FILE: ~/Repositories/GitHub/CS250-reviews/midterm1.org
+:ARCHIVE_OLPATH: Pointing
+:ARCHIVE_CATEGORY: midterm1
+:END:
+
+A circuit with n wires input and 2^n wires output. Decoding output is selected or not_selected
+
+| X | Y | D0 | D1 | D2 | D3 |
+|---+----+----+----+-----+----|
+| 0 | 0 | 1  | 0  | 0  | 0  |
+| 0 | 1 | 0  | 1  | 0  | 0  |
+| 1 | 0 | 0  | 0  | 1  | 0  |
+| 1 | 1 | 0  | 0  | 0  | 1  |

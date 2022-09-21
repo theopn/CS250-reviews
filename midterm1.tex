@@ -1,4 +1,4 @@
-% Created 2022-09-19 Mon 00:52
+% Created 2022-09-20 Tue 22:26
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -30,10 +30,10 @@
 
 
 \section{Why Computer Architecture}
-\label{sec:orgc8a0220}
+\label{sec:orgbdce6d4}
 
 \subsection{Definitions}
-\label{sec:org80b6dfb}
+\label{sec:org2908219}
 
 \begin{itemize}
 \item \emph{Computer} is a machine that can be programmed to \textbf{carry out computation automatically}
@@ -55,7 +55,7 @@
 \end{itemize}
 
 \subsection{C Compiling Process}
-\label{sec:org08285fc}
+\label{sec:org264ea90}
 
 // TODO Find a better way to put diagram in Org files
 \begin{verbatim}
@@ -68,7 +68,7 @@ source_code -> preprocessor -> preprocessed source code -> compiler -> assembly 
 \end{itemize}
 
 \subsection{Mechanical Computers}
-\label{sec:orgba3713a}
+\label{sec:orgb6a9233}
 
 \begin{itemize}
 \item Antikythera Mechanism (200B.C): Count Olumpics days
@@ -76,7 +76,7 @@ source_code -> preprocessor -> preprocessed source code -> compiler -> assembly 
 \end{itemize}
 
 \subsubsection{Disadvantages}
-\label{sec:orgc1e6b6a}
+\label{sec:org8f54269}
 
 \begin{itemize}
 \item Parts are small, require individual assembly
@@ -86,14 +86,14 @@ source_code -> preprocessor -> preprocessed source code -> compiler -> assembly 
 \end{itemize}
 
 \subsection{Vacuum Tube Computers}
-\label{sec:org807699f}
+\label{sec:org5d41e59}
 
 \begin{itemize}
 \item Colossus
 \end{itemize}
 
 \subsubsection{Disadvantages}
-\label{sec:org07bfcb1}
+\label{sec:org7c212ef}
 
 \begin{itemize}
 \item About the same volume as mechanical computer
@@ -102,7 +102,7 @@ source_code -> preprocessor -> preprocessed source code -> compiler -> assembly 
 \end{itemize}
 
 \subsection{Transistor}
-\label{sec:org010ec42}
+\label{sec:org6513f3f}
 
 \begin{itemize}
 \item First one built at AT\&T Bell Labs
@@ -111,23 +111,23 @@ source_code -> preprocessor -> preprocessed source code -> compiler -> assembly 
 \end{itemize}
 
 \subsection{Two Architectures}
-\label{sec:orgc586793}
+\label{sec:orgaef0c3a}
 
 \subsubsection{Harvard Architecture}
-\label{sec:org152fc90}
+\label{sec:org9ba463f}
 
 \textbf{Separate memories} for instructions and data
 
 \subsubsection{Von Neumann Architecture}
-\label{sec:org333747e}
+\label{sec:orgb05bdc9}
 
 \textbf{Single memory} for instruction and data
 
 \section{Representation}
-\label{sec:org6ad20ca}
+\label{sec:org1d7a4f7}
 
 \subsection{Electrical Representation of Bits}
-\label{sec:org1df6ba4}
+\label{sec:orge8988f1}
 
 \begin{itemize}
 \item \textbf{V (max) voltage V - \(\Delta\)} is recognizes as 1
@@ -136,7 +136,7 @@ source_code -> preprocessor -> preprocessed source code -> compiler -> assembly 
 \end{itemize}
 
 \subsection{Bit String}
-\label{sec:orge795f23}
+\label{sec:org634b756}
 
 \begin{itemize}
 \item \textbf{Bus: Collection of k wires carrying k-bits}
@@ -146,41 +146,41 @@ source_code -> preprocessor -> preprocessed source code -> compiler -> assembly 
 \end{itemize}
 
 \section{Regular Representations}
-\label{sec:org8fe1875}
+\label{sec:org59fc3dd}
 
 Unsigned and 2's complement integers are native data types for most modern circuits
 
 \subsection{Unsigned integer, base 2, weighted positional}
-\label{sec:org8d5d100}
+\label{sec:org67389ad}
 
 \textbf{Regular binary number} that we think of normally.
 
 \texttt{001011} = \(0 \times 2^5 + 0 \times 2^4 + 1 \times 2^3 + 0 \times 2^2 + 1 \times 2^1 + 1 \times 2^0 = 11\)
 
 \subsection{Sign Magnitude}
-\label{sec:orgb9c460a}
+\label{sec:org0c6e1a6}
 
 \textbf{UIB2WP but the MSB is the sign} (MSP = left most bit).
 
 \texttt{101011} = \(-1(0 \times 2^4 + 1 \times 2^3 + 0 \times 2^2 + 1 \times 2^1 + 1 \times 2^0) = -11\)
 
 \subsubsection{Characteristics of sign magnitude}
-\label{sec:org6791e67}
+\label{sec:org7844f54}
 
 \begin{itemize}
-\item There are two zeros (0000 = +0, 1000 = -1)
+\item There are two zeros (0000 = +0, 1000 = -0)
 \item Less number can be represented (duh)
 \end{itemize}
 
 \subsection{Two's Complement}
-\label{sec:org4633eac}
+\label{sec:org49bf412}
 
 \textbf{MSB weight is negative}
 
 \texttt{101011} = \(-(1 \times 2^4) + 1 \times 2^3 + 0 \times 2^2 + 1 \times 2^1 + 1 \times 2^0) = -5\)
 
 \subsubsection{Characteristics of two's complement}
-\label{sec:org496655b}
+\label{sec:org1600ce0}
 
 \begin{itemize}
 \item Only one bit string for zero
@@ -189,7 +189,7 @@ Unsigned and 2's complement integers are native data types for most modern circu
 \end{itemize}
 
 \section{Casting/Sign Extension}
-\label{sec:org0145952}
+\label{sec:orgb2b5273}
 
 \begin{itemize}
 \item Unsigned integer: \textbf{Add 0 in front}
@@ -197,7 +197,7 @@ Unsigned and 2's complement integers are native data types for most modern circu
 \end{itemize}
 
 \section{Overflow}
-\label{sec:org3494566}
+\label{sec:orgfe8a6bf}
 
 \begin{itemize}
 \item Adding two k-bit unsigned integer resulting in (k+1)-bit result
@@ -205,20 +205,20 @@ Unsigned and 2's complement integers are native data types for most modern circu
 \end{itemize}
 
 \section{Gray Code}
-\label{sec:orgc27a5d9}
+\label{sec:orgacc8964}
 
 For sensors where bits need to be detected fast, "gray code" where only one bit changes per number is used.
 
 \section{ASCII}
-\label{sec:org11908b4}
+\label{sec:org6eba12f}
 
 \subsection{History}
-\label{sec:org87d64c8}
+\label{sec:orgbc2b5be}
 
 \emph{Baudot Code} in 1870 used to represent \(2^5\) characters with 5 keys.
 
 \subsubsection{Design of ASCII}
-\label{sec:org4db9cdf}
+\label{sec:org96860ba}
 
 \begin{itemize}
 \item \textbf{Designed for machine, not human}
@@ -227,7 +227,7 @@ For sensors where bits need to be detected fast, "gray code" where only one bit 
 \end{itemize}
 
 \subsubsection{Unicode}
-\label{sec:orga224ea9}
+\label{sec:org6be04af}
 
 \begin{itemize}
 \item Up to 4 bytes per character
@@ -235,7 +235,7 @@ For sensors where bits need to be detected fast, "gray code" where only one bit 
 \end{itemize}
 
 \section{Order of Bytes in Memory}
-\label{sec:org6fcaf0e}
+\label{sec:org9f571a1}
 
 \begin{itemize}
 \item \emph{Big Endian}: \textbf{MSB comes first}
@@ -245,23 +245,23 @@ For sensors where bits need to be detected fast, "gray code" where only one bit 
 \end{itemize}
 
 \section{Floating Point Representation (IEEE 754)}
-\label{sec:orgd573ec0}
+\label{sec:org47431b7}
 
 \texttt{|S| Exponent | mantissa |}
 
 \subsection{Exponent}
-\label{sec:orgccf78ee}
+\label{sec:orgf18a0f2}
 
 Exponent is a biased integer. The initial range is -127 < e < 127, sign is made implicit by E = e + Bias = e + 127.
 
 \subsection{Mantissa}
-\label{sec:org714f1df}
+\label{sec:org2b3c6a0}
 
 Unless the number is 0, the MSB of the mantissa must be 1 -> No need to store! (\textbf{hidden bit}).
 Instead, \textbf{one extra precision bit} is stored in the end.
 
 \subsection{Runtime Anomalies}
-\label{sec:orgcd37fc0}
+\label{sec:orga7dc0eb}
 
 \begin{enumerate}
 \item \emph{E = 0, Mantissa = 0,}: \(\pm 0\), depending on the sign bit
@@ -269,4 +269,54 @@ Instead, \textbf{one extra precision bit} is stored in the end.
 \item \emph{E = 255, Mantissa = 0}: \(\pm \infty\); in general, overflow is set to infinity to help people
 \item \emph{E = 255, Mantissa \(\neq\) 0}: Not a Number
 \end{enumerate}
+
+
+\section{Memory}
+\label{sec:org4e44dd0}
+
+\subsection{Pointing Function}
+\label{sec:orgefa46c9}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.9\linewidth]{./img/pointing_function.jpg}
+\caption{\label{fig:org0ec129b}Abstract Pointing Function Diagram}
+\end{figure}
+
+Memory chips are 2D, \(2^{k/2} \times 2^{k/2}\) grid creates \(2^k\) intersections -> Only \(2 * 2^{k/2}\) wires needed! Optimized design can reduce number of wires by \(\sqrt{2^k} / 2\)
+
+\subsection{Register}
+\label{sec:org235d5f8}
+
+k-bit register has k latches to store \(2^k\) bit strings.
+
+\section{Pointing}
+\label{sec:org9374411}
+
+\subsection{Decoder}
+\label{sec:org2ce7f15}
+
+A circuit with n wires input and 2\textsuperscript{n} wires output. Decoding output is selected or not\textsubscript{selected}
+
+\begin{center}
+\begin{tabular}{rrrrrr}
+X & Y & D0 & D1 & D2 & D3\\
+\hline
+0 & 0 & 1 & 0 & 0 & 0\\
+1 & 0 & 0 & 1 & 0 & 0\\
+0 & 1 & 0 & 0 & 1 & 0\\
+1 & 1 & 0 & 0 & 0 & 1\\
+\end{tabular}
+\end{center}
+
+2-to-4 decoder truth table. \textbf{n inputs and 2\textsuperscript{n} outputs}.
+
+\subsection{Selecting bus}
+\label{sec:orga7b8fd4}
+
+\begin{itemize}
+\item \emph{Bus}: Group of n wires, carry n bit
+\item \emph{Multiplexer (mux)}: Selects \textbf{from 2\textsuperscript{n} k-bit input buses, outputs to 1 k-bit output bus}
+\item \emph{Demultiplexer (Demux)}: Reverse of mux
+\end{itemize}
 \end{document}

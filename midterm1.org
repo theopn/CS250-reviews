@@ -98,7 +98,7 @@ Unsigned and 2's complement integers are native data types for most modern circu
 
 *** Characteristics of sign magnitude
 
-- There are two zeros (0000 = +0, 1000 = -1)
+- There are two zeros (0000 = +0, 1000 = -0)
 - Less number can be represented (duh)
 
 ** Two's Complement
@@ -171,3 +171,38 @@ Instead, *one extra precision bit* is stored in the end.
 3. /E = 255, Mantissa = 0/: $\pm \infty$; in general, overflow is set to infinity to help people
 4. /E = 255, Mantissa $\neq$ 0/: Not a Number
 
+
+* Memory
+
+** Pointing Function
+
+#+CAPTION: Abstract Pointing Function Diagram
+#+NAME:   Abstract Pointing Function Diagram by Prof. George B. Adams III
+[[./img/pointing_function.jpg]]
+
+Memory chips are 2D, $2^{k/2} \times 2^{k/2}$ grid creates $2^k$ intersections -> Only $2 * 2^{k/2}$ wires needed! Optimized design can reduce number of wires by $\sqrt{2^k} / 2$
+
+** Register
+
+k-bit register has k latches to store $2^k$ bit strings.
+
+* Pointing
+
+** Decoder
+
+A circuit with n wires input and 2^n wires output. Decoding output is selected or not_selected
+
+| X | Y | D0 | D1 | D2 | D3 |
+|---+---+----+----+----+----|
+| 0 | 0 |  1 |  0 |  0 |  0 |
+| 1 | 0 |  0 |  1 |  0 |  0 |
+| 0 | 1 |  0 |  0 |  1 |  0 |
+| 1 | 1 |  0 |  0 |  0 |  1 |
+
+2-to-4 decoder truth table. *n inputs and 2^n outputs*.
+
+** Selecting bus
+
+- /Bus/: Group of n wires, carry n bit
+- /Multiplexer (mux)/: Selects *from 2^n k-bit input buses, outputs to 1 k-bit output bus*
+- /Demultiplexer (Demux)/: Reverse of mux
