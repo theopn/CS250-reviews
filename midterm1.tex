@@ -1,4 +1,4 @@
-% Created 2022-09-20 Tue 22:26
+% Created 2022-09-20 Tue 22:53
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -30,10 +30,10 @@
 
 
 \section{Why Computer Architecture}
-\label{sec:orgbdce6d4}
+\label{sec:org86fa1b2}
 
 \subsection{Definitions}
-\label{sec:org2908219}
+\label{sec:org26f6d12}
 
 \begin{itemize}
 \item \emph{Computer} is a machine that can be programmed to \textbf{carry out computation automatically}
@@ -55,7 +55,7 @@
 \end{itemize}
 
 \subsection{C Compiling Process}
-\label{sec:org264ea90}
+\label{sec:orge8e59c5}
 
 // TODO Find a better way to put diagram in Org files
 \begin{verbatim}
@@ -68,7 +68,7 @@ source_code -> preprocessor -> preprocessed source code -> compiler -> assembly 
 \end{itemize}
 
 \subsection{Mechanical Computers}
-\label{sec:orgb6a9233}
+\label{sec:org5e31303}
 
 \begin{itemize}
 \item Antikythera Mechanism (200B.C): Count Olumpics days
@@ -76,7 +76,7 @@ source_code -> preprocessor -> preprocessed source code -> compiler -> assembly 
 \end{itemize}
 
 \subsubsection{Disadvantages}
-\label{sec:org8f54269}
+\label{sec:org08dc56e}
 
 \begin{itemize}
 \item Parts are small, require individual assembly
@@ -86,14 +86,14 @@ source_code -> preprocessor -> preprocessed source code -> compiler -> assembly 
 \end{itemize}
 
 \subsection{Vacuum Tube Computers}
-\label{sec:org5d41e59}
+\label{sec:orge174ab7}
 
 \begin{itemize}
 \item Colossus
 \end{itemize}
 
 \subsubsection{Disadvantages}
-\label{sec:org7c212ef}
+\label{sec:orgcf6a44e}
 
 \begin{itemize}
 \item About the same volume as mechanical computer
@@ -102,7 +102,7 @@ source_code -> preprocessor -> preprocessed source code -> compiler -> assembly 
 \end{itemize}
 
 \subsection{Transistor}
-\label{sec:org6513f3f}
+\label{sec:orgd218750}
 
 \begin{itemize}
 \item First one built at AT\&T Bell Labs
@@ -111,23 +111,23 @@ source_code -> preprocessor -> preprocessed source code -> compiler -> assembly 
 \end{itemize}
 
 \subsection{Two Architectures}
-\label{sec:orgaef0c3a}
+\label{sec:orgd2e215f}
 
 \subsubsection{Harvard Architecture}
-\label{sec:org9ba463f}
+\label{sec:orgd7df494}
 
 \textbf{Separate memories} for instructions and data
 
 \subsubsection{Von Neumann Architecture}
-\label{sec:orgb05bdc9}
+\label{sec:orgc02bc5b}
 
 \textbf{Single memory} for instruction and data
 
 \section{Representation}
-\label{sec:org1d7a4f7}
+\label{sec:orgcb94292}
 
 \subsection{Electrical Representation of Bits}
-\label{sec:orge8988f1}
+\label{sec:orgb2669b5}
 
 \begin{itemize}
 \item \textbf{V (max) voltage V - \(\Delta\)} is recognizes as 1
@@ -136,7 +136,7 @@ source_code -> preprocessor -> preprocessed source code -> compiler -> assembly 
 \end{itemize}
 
 \subsection{Bit String}
-\label{sec:org634b756}
+\label{sec:org3427505}
 
 \begin{itemize}
 \item \textbf{Bus: Collection of k wires carrying k-bits}
@@ -146,26 +146,26 @@ source_code -> preprocessor -> preprocessed source code -> compiler -> assembly 
 \end{itemize}
 
 \section{Regular Representations}
-\label{sec:org59fc3dd}
+\label{sec:orgb91683d}
 
 Unsigned and 2's complement integers are native data types for most modern circuits
 
 \subsection{Unsigned integer, base 2, weighted positional}
-\label{sec:org67389ad}
+\label{sec:org44b8e1f}
 
 \textbf{Regular binary number} that we think of normally.
 
 \texttt{001011} = \(0 \times 2^5 + 0 \times 2^4 + 1 \times 2^3 + 0 \times 2^2 + 1 \times 2^1 + 1 \times 2^0 = 11\)
 
 \subsection{Sign Magnitude}
-\label{sec:org0c6e1a6}
+\label{sec:orge8535e3}
 
 \textbf{UIB2WP but the MSB is the sign} (MSP = left most bit).
 
 \texttt{101011} = \(-1(0 \times 2^4 + 1 \times 2^3 + 0 \times 2^2 + 1 \times 2^1 + 1 \times 2^0) = -11\)
 
 \subsubsection{Characteristics of sign magnitude}
-\label{sec:org7844f54}
+\label{sec:org5c7d03c}
 
 \begin{itemize}
 \item There are two zeros (0000 = +0, 1000 = -0)
@@ -173,14 +173,14 @@ Unsigned and 2's complement integers are native data types for most modern circu
 \end{itemize}
 
 \subsection{Two's Complement}
-\label{sec:org49bf412}
+\label{sec:orgb51f8ed}
 
 \textbf{MSB weight is negative}
 
 \texttt{101011} = \(-(1 \times 2^4) + 1 \times 2^3 + 0 \times 2^2 + 1 \times 2^1 + 1 \times 2^0) = -5\)
 
 \subsubsection{Characteristics of two's complement}
-\label{sec:org1600ce0}
+\label{sec:org0b650da}
 
 \begin{itemize}
 \item Only one bit string for zero
@@ -189,7 +189,7 @@ Unsigned and 2's complement integers are native data types for most modern circu
 \end{itemize}
 
 \section{Casting/Sign Extension}
-\label{sec:orgb2b5273}
+\label{sec:orgf71205e}
 
 \begin{itemize}
 \item Unsigned integer: \textbf{Add 0 in front}
@@ -197,7 +197,7 @@ Unsigned and 2's complement integers are native data types for most modern circu
 \end{itemize}
 
 \section{Overflow}
-\label{sec:orgfe8a6bf}
+\label{sec:org76f1629}
 
 \begin{itemize}
 \item Adding two k-bit unsigned integer resulting in (k+1)-bit result
@@ -205,20 +205,20 @@ Unsigned and 2's complement integers are native data types for most modern circu
 \end{itemize}
 
 \section{Gray Code}
-\label{sec:orgacc8964}
+\label{sec:org5e68a09}
 
 For sensors where bits need to be detected fast, "gray code" where only one bit changes per number is used.
 
 \section{ASCII}
-\label{sec:org6eba12f}
+\label{sec:org69314f6}
 
 \subsection{History}
-\label{sec:orgbc2b5be}
+\label{sec:orgac3f0a8}
 
 \emph{Baudot Code} in 1870 used to represent \(2^5\) characters with 5 keys.
 
 \subsubsection{Design of ASCII}
-\label{sec:org96860ba}
+\label{sec:orgfc3d6bd}
 
 \begin{itemize}
 \item \textbf{Designed for machine, not human}
@@ -227,7 +227,7 @@ For sensors where bits need to be detected fast, "gray code" where only one bit 
 \end{itemize}
 
 \subsubsection{Unicode}
-\label{sec:org6be04af}
+\label{sec:org38ed606}
 
 \begin{itemize}
 \item Up to 4 bytes per character
@@ -235,7 +235,7 @@ For sensors where bits need to be detected fast, "gray code" where only one bit 
 \end{itemize}
 
 \section{Order of Bytes in Memory}
-\label{sec:org9f571a1}
+\label{sec:org2400e91}
 
 \begin{itemize}
 \item \emph{Big Endian}: \textbf{MSB comes first}
@@ -245,23 +245,23 @@ For sensors where bits need to be detected fast, "gray code" where only one bit 
 \end{itemize}
 
 \section{Floating Point Representation (IEEE 754)}
-\label{sec:org47431b7}
+\label{sec:org98c6887}
 
 \texttt{|S| Exponent | mantissa |}
 
 \subsection{Exponent}
-\label{sec:orgf18a0f2}
+\label{sec:org4e253a9}
 
 Exponent is a biased integer. The initial range is -127 < e < 127, sign is made implicit by E = e + Bias = e + 127.
 
 \subsection{Mantissa}
-\label{sec:org2b3c6a0}
+\label{sec:orgf5e30b8}
 
 Unless the number is 0, the MSB of the mantissa must be 1 -> No need to store! (\textbf{hidden bit}).
 Instead, \textbf{one extra precision bit} is stored in the end.
 
 \subsection{Runtime Anomalies}
-\label{sec:orga7dc0eb}
+\label{sec:org1339181}
 
 \begin{enumerate}
 \item \emph{E = 0, Mantissa = 0,}: \(\pm 0\), depending on the sign bit
@@ -272,29 +272,29 @@ Instead, \textbf{one extra precision bit} is stored in the end.
 
 
 \section{Memory}
-\label{sec:org4e44dd0}
+\label{sec:org4022c45}
 
 \subsection{Pointing Function}
-\label{sec:orgefa46c9}
+\label{sec:org7ac8b26}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./img/pointing_function.jpg}
-\caption{\label{fig:org0ec129b}Abstract Pointing Function Diagram}
+\caption{\label{fig:org2ff79ef}Abstract Pointing Function Diagram}
 \end{figure}
 
 Memory chips are 2D, \(2^{k/2} \times 2^{k/2}\) grid creates \(2^k\) intersections -> Only \(2 * 2^{k/2}\) wires needed! Optimized design can reduce number of wires by \(\sqrt{2^k} / 2\)
 
 \subsection{Register}
-\label{sec:org235d5f8}
+\label{sec:orga83763c}
 
 k-bit register has k latches to store \(2^k\) bit strings.
 
 \section{Pointing}
-\label{sec:org9374411}
+\label{sec:org2e36d06}
 
 \subsection{Decoder}
-\label{sec:org2ce7f15}
+\label{sec:org9b1b19c}
 
 A circuit with n wires input and 2\textsuperscript{n} wires output. Decoding output is selected or not\textsubscript{selected}
 
@@ -312,11 +312,149 @@ X & Y & D0 & D1 & D2 & D3\\
 2-to-4 decoder truth table. \textbf{n inputs and 2\textsuperscript{n} outputs}.
 
 \subsection{Selecting bus}
-\label{sec:orga7b8fd4}
+\label{sec:org703d9d1}
 
 \begin{itemize}
 \item \emph{Bus}: Group of n wires, carry n bit
 \item \emph{Multiplexer (mux)}: Selects \textbf{from 2\textsuperscript{n} k-bit input buses, outputs to 1 k-bit output bus}
 \item \emph{Demultiplexer (Demux)}: Reverse of mux
 \end{itemize}
+
+\section{Processor}
+\label{sec:orgcd07648}
+
+\subsection{Revisit of Architectures}
+\label{sec:org4ff58a5}
+
+\begin{itemize}
+\item Harvard: Optimized design and simultaneous access for data and instructions; storage inefficiency
+\item Von Neumann: Less memory needed; security issue
+\end{itemize}
+
+\subsection{Processor is}
+\label{sec:orgbbd534d}
+
+\begin{itemize}
+\item Not CPU
+\item Includes co-processor and microcontroller
+\item Building specific one purpose is expensive -> General purpose processor
+\end{itemize}
+
+\section{General One-Step Processor Circuit}
+\label{sec:orgf908c41}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.9\linewidth]{./img/general_one_step_processor_circuit.jpg}
+\caption{\label{fig:orgd9ca102}General One-Step Processor Circuit}
+\end{figure}
+
+Key points:
+\begin{itemize}
+\item Input goes from register collection to MUX1 and MUX2, they choose two k-bit strings
+\item ALU \textbf{continously} to the calculation and outputs to the MUX3
+\item MUX3 chooses one of the result and outputs
+\item DeMUX put the bit string back to \textbf{correct} location (MUX3 will mess it up if it puts it back to the collection w/o DeMUX)
+\end{itemize}
+
+\subsection{Fetch-Execute Cycle}
+\label{sec:org0c714f7}
+
+\begin{verbatim}
+while (power is on) {
+  fetch;
+  execute;
+}
+\end{verbatim}
+
+Wow fancy algorithm.
+
+\subsection{Clock rate and Instruction rate}
+\label{sec:orgd6b9939}
+
+\begin{itemize}
+\item Clock rate: Worst circuit propagation delay
+\item Registers and mux/demux delay exists
+\item ALU propagation delay varies a lot since it's where all the calculations happen
+\end{itemize}
+
+\begin{align*}
+\text{CPU Time} = \frac{Instructions}{Program} \times \frac{Clock Cycles}{Instruction} \times \frac{Seconds}{Clock cycle}
+\end{align*}
+
+\begin{itemize}
+\item Instruction per program: Software runtime dependent. 251 flashback
+\item Clock cycles per instruction: Compiler and circuit design dependent
+\item Seconds per clock cycle: Worst case propagation delay, the clock rate of the CPU
+\end{itemize}
+
+\subsection{Start and Stopping Hardware}
+\label{sec:orgaf38226}
+
+Hardware is designed to run 24/7. For your computer, there is an idle loop to run to continue fetch-execute cycle.
+
+Bootstrap: \textbf{power-on reset} of latches to put the computer in known state to start fetch-execute cycle, 
+
+\section{Instruction Encoding}
+\label{sec:org57c6d89}
+
+\subsection{Instruction Set Architecture}
+\label{sec:orgc5188a6}
+
+Set of operations chosen by a careful consideration to make processors the more expensive.
+
+\begin{verbatim}
+| opcode | operand 1 | operand 2 | ... | Result 1 | Result 2 | ...
+\end{verbatim}
+
+\begin{itemize}
+\item \textbf{Opcode}: Selects ALU result to use, contains number of operands
+\item \textbf{Operands}: Provide input to ALU
+\item \textbf{Results}: Pointers to storage locations
+\end{itemize}
+
+\subsection{Instruction Size}
+\label{sec:org9e623a1}
+
+\subsubsection{Variable Length}
+\label{sec:orgaf7025a}
+
+\begin{itemize}
+\item Marketing people loves it
+\item Compiler people hates it
+\item Computer slow
+\item Complex
+\end{itemize}
+
+\subsubsection{Fixed Length}
+\label{sec:orgc09d553}
+
+\begin{itemize}
+\item Marketing people hates it
+\item Compiler people loves it
+\item Ez
+\item Instructions may not utilize all the bits
+\end{itemize}
+
+\subsubsection{What drives the length?}
+\label{sec:org8e6779a}
+
+\begin{itemize}
+\item Not opcode, \(2^k \times 2 = 2^{k+1}\) only 1 bit is needed to double the operations
+\item Operands, results fields are the bad guys
+\end{itemize}
+
+\subsubsection{Fix Pointer Size}
+\label{sec:orge8639a0}
+
+\begin{itemize}
+\item Make pointer size a constant
+\item ALU circuits access memory, fetch operands and store result in fixed number of registers
+\item Main memory grow, pointer unchanged
+\end{itemize}
+
+\section{x86}
+\label{sec:orgb5b1ca9}
+
+Intel rich.
 \end{document}

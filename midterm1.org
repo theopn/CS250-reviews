@@ -177,7 +177,7 @@ Instead, *one extra precision bit* is stored in the end.
 ** Pointing Function
 
 #+CAPTION: Abstract Pointing Function Diagram
-#+NAME:   Abstract Pointing Function Diagram by Prof. George B. Adams III
+#+NAME:   Abstract Pointing Function Diagram by Prof. George B. Adams
 [[./img/pointing_function.jpg]]
 
 Memory chips are 2D, $2^{k/2} \times 2^{k/2}$ grid creates $2^k$ intersections -> Only $2 * 2^{k/2}$ wires needed! Optimized design can reduce number of wires by $\sqrt{2^k} / 2$
@@ -206,3 +206,104 @@ A circuit with n wires input and 2^n wires output. Decoding output is selected o
 - /Bus/: Group of n wires, carry n bit
 - /Multiplexer (mux)/: Selects *from 2^n k-bit input buses, outputs to 1 k-bit output bus*
 - /Demultiplexer (Demux)/: Reverse of mux
+
+* Processor 
+
+** Revisit of Architectures
+
+- Harvard: Optimized design and simultaneous access for data and instructions; storage inefficiency
+- Von Neumann: Less memory needed; security issue
+
+** Processor is
+
+- Not CPU
+- Includes co-processor and microcontroller
+- Building specific one purpose is expensive -> General purpose processor
+
+* General One-Step Processor Circuit
+
+#+CAPTION: General One-Step Processor Circuit
+#+NAME:   General One-step Processor Circuit Diagram by Prof. George B. Adams
+[[./img/general_one_step_processor_circuit.jpg]]
+
+Key points:
+- Input goes from register collection to MUX1 and MUX2, they choose two k-bit strings
+- ALU *continously* to the calculation and outputs to the MUX3
+- MUX3 chooses one of the result and outputs
+- DeMUX put the bit string back to *correct* location (MUX3 will mess it up if it puts it back to the collection w/o DeMUX)
+
+** Fetch-Execute Cycle
+
+#+begin_src
+while (power is on) {
+  fetch;
+  execute;
+}
+#+end_src
+
+Wow fancy algorithm.
+
+** Clock rate and Instruction rate
+
+- Clock rate: Worst circuit propagation delay
+- Registers and mux/demux delay exists
+- ALU propagation delay varies a lot since it's where all the calculations happen
+
+\begin{align*}
+\text{CPU Time} = \frac{Instructions}{Program} \times \frac{Clock Cycles}{Instruction} \times \frac{Seconds}{Clock cycle}
+\end{align*}
+
+- Instruction per program: Software runtime dependent. 251 flashback
+- Clock cycles per instruction: Compiler and circuit design dependent
+- Seconds per clock cycle: Worst case propagation delay, the clock rate of the CPU
+
+** Start and Stopping Hardware
+
+Hardware is designed to run 24/7. For your computer, there is an idle loop to run to continue fetch-execute cycle.
+
+Bootstrap: *power-on reset* of latches to put the computer in known state to start fetch-execute cycle, 
+
+* Instruction Encoding
+
+** Instruction Set Architecture
+
+Set of operations chosen by a careful consideration to make processors the more expensive.
+
+#+begin_src
+| opcode | operand 1 | operand 2 | ... | Result 1 | Result 2 | ...
+#+end_src
+
+- *Opcode*: Selects ALU result to use, contains number of operands
+- *Operands*: Provide input to ALU
+- *Results*: Pointers to storage locations
+
+** Instruction Size
+
+*** Variable Length
+
+- Marketing people loves it
+- Compiler people hates it
+- Computer slow
+- Complex
+
+*** Fixed Length
+
+- Marketing people hates it
+- Compiler people loves it
+- Ez
+- Instructions may not utilize all the bits
+
+*** What drives the length?
+
+- Not opcode, $2^k \times 2 = 2^{k+1}$ only 1 bit is needed to double the operations
+- Operands, results fields are the bad guys
+
+*** Fix Pointer Size
+
+- Make pointer size a constant
+- ALU circuits access memory, fetch operands and store result in fixed number of registers
+- Main memory grow, pointer unchanged
+
+* x86
+
+Intel rich.
