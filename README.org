@@ -2,7 +2,9 @@
 #+AUTHOR: Theo Park
 #+OPTIONS: toc:2
 
-[[https://giphy.com/embed/QxjYIG40lpjkEDbARF]]
+#+CAPTION: From https://giphy.com/embed/QxjYIG40lpjkEDbARF
+[[./img/swag.gif]]
+
 
 This repository contains review materials made by me for Purdue University CS25000: Computer Architecture taught by Professor George Adams in Fall 2022.
 
